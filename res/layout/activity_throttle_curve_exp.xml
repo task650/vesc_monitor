@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:orientation="vertical" n1:id="@id/activity_simple_xyplot" n1:paddingLeft="0.0dip" n1:paddingTop="0.0dip" n1:paddingRight="0.0dip" n1:paddingBottom="0.0dip" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayout" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_above="@id/linearLayoutNumberPicker1" n1:layout_alignParentStart="true">
+        <LinearLayout n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+        <LinearLayout n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="3.0">
+            <TextView n1:gravity="center_horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Acceleration" />
+        </LinearLayout>
+        <LinearLayout n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="3.0">
+            <TextView n1:gravity="center_horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Braking" />
+        </LinearLayout>
+        <LinearLayout n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="4.0">
+            <TextView n1:gravity="center_horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Mode" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.LineChart n1:id="@id/throttleCurveChart" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_above="@id/linearLayout" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true" />
+    <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayoutNumberPicker1" n1:layout_width="fill_parent" n1:layout_height="200.0dip" n1:layout_alignParentBottom="true" n1:layout_alignParentStart="true">
+        <LinearLayout n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+        <NumberPicker n1:id="@id/numberPickerThrottleExp" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="3.0" n1:scaleX="0.8" n1:scaleY="0.8" />
+        <NumberPicker n1:id="@id/numberPickerThrottleExpBrake" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="3.0" n1:scaleX="0.8" n1:scaleY="0.8" />
+        <Spinner n1:entries="@array/throttleMode_arrays" n1:layout_gravity="center" n1:id="@id/spinnerThrottleExpMode" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/throttleMode_prompt" n1:layout_weight="4.0" />
+    </LinearLayout>
+</RelativeLayout>

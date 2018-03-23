@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:paddingLeft="@dimen/activity_horizontal_margin" n1:paddingTop="@dimen/activity_vertical_margin" n1:paddingRight="@dimen/activity_horizontal_margin" n1:paddingBottom="@dimen/activity_vertical_margin" n1:focusableInTouchMode="true" n1:descendantFocusability="beforeDescendants" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ScrollView n1:id="@id/scrollView" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+        <LinearLayout n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentRight="true" n1:layout_alignParentEnd="true">
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Board Name" n1:layout_weight="2.0" />
+                <EditText n1:id="@id/editTextBoardName" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:layout_weight="1.0" n1:inputType="text" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="No of Motors (VESC)" n1:layout_weight="2.0" />
+                <Spinner n1:entries="@array/noOfMotors_arrays" n1:id="@id/spinnerNoOfMotors" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/noOfMotors_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView n1:layout_width="fill_parent" n1:layout_height="wrap_content" />
+            <LinearLayout n1:background="@android:drawable/picture_frame" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@id/textViewModesSetup" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Modes Setup" />
+            </LinearLayout>
+            <android.support.v4.widget.Space n1:layout_width="wrap_content" n1:layout_height="10.0dip" />
+            <LinearLayout n1:background="@android:drawable/picture_frame" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@id/textViewBatterySetup" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Battery Setup" />
+            </LinearLayout>
+            <android.support.v4.widget.Space n1:layout_width="wrap_content" n1:layout_height="10.0dip" />
+            <LinearLayout n1:background="@android:drawable/picture_frame" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@id/textViewDriveGearSetup" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Drive Gear Setup" />
+            </LinearLayout>
+            <android.support.v4.widget.Space n1:layout_width="wrap_content" n1:layout_height="10.0dip" />
+            <LinearLayout n1:background="@android:drawable/picture_frame" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@id/textViewVideoSetup" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Video Setup" />
+            </LinearLayout>
+            <android.support.v4.widget.Space n1:layout_width="wrap_content" n1:layout_height="10.0dip" />
+            <LinearLayout n1:background="@android:drawable/picture_frame" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@id/textViewBoardInfo" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Board Info" />
+            </LinearLayout>
+            <TextView n1:layout_width="fill_parent" n1:layout_height="wrap_content" />
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <CheckBox n1:id="@id/saveGPSPositionCheckBox" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Save GPS position" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <CheckBox n1:id="@id/isConnectedToSlaveCheckBox" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Connect by CAN to ID" n1:layout_weight="2.0" />
+                <Spinner n1:entries="@array/controllerid_arrays" n1:id="@id/spinnerControllerId" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/controllerid_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <CheckBox n1:id="@id/useDarktheme" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Use dark theme" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

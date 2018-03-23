@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ackmaniac.vescmonitor">
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@android:style/Theme.Holo.Light">
+        <service android:enabled="true" android:exported="true" android:name="ackmaniac.vescmonitor.NotificationService"/>
+        <activity android:keepScreenOn="true" android:label="@string/app_name" android:name="ackmaniac.vescmonitor.DeviceScanActivity" android:screenOrientation="userPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:keepScreenOn="true" android:name="ackmaniac.vescmonitor.Settings" android:screenOrientation="userPortrait"/>
+        <activity android:keepScreenOn="true" android:name="ackmaniac.vescmonitor.ModeSettings" android:screenOrientation="userPortrait"/>
+        <activity android:keepScreenOn="true" android:name="ackmaniac.vescmonitor.DeviceControlActivity" android:screenOrientation="userPortrait"/>
+        <service android:enabled="true" android:keepScreenOn="true" android:name="ackmaniac.vescmonitor.BluetoothLeService" android:screenOrientation="userPortrait"/>
+        <activity android:keepScreenOn="true" android:label="@string/title_activity_modes" android:name="ackmaniac.vescmonitor.Modes" android:screenOrientation="userPortrait"/>
+        <activity android:keepScreenOn="true" android:label="@string/title_activity_battery_setup" android:name="ackmaniac.vescmonitor.BatterySetup" android:screenOrientation="userPortrait"/>
+        <activity android:keepScreenOn="true" android:label="@string/title_activity_drive_gear_setup" android:name="ackmaniac.vescmonitor.DriveGearSetup" android:screenOrientation="userPortrait"/>
+        <activity android:keepScreenOn="true" android:label="@string/title_activity_plot_screen" android:name="ackmaniac.vescmonitor.LineChartActivity"/>
+        <activity android:keepScreenOn="true" android:label="@string/title_activity_video_setup" android:name="ackmaniac.vescmonitor.VideoSettings" android:screenOrientation="userPortrait"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/title_activity_file_chooser" android:name="ackmaniac.vescmonitor.FileChooserActivity"/>
+        <activity android:name="ackmaniac.vescmonitor.ThrottleCurveActivity" android:screenOrientation="userPortrait"/>
+        <activity android:label="@string/title_activity_board_info" android:name="ackmaniac.vescmonitor.BoardInfo"/>
+        <activity android:label="@string/title_activity_blank" android:name="ackmaniac.vescmonitor.BlankActivity"/>
+    </application>
+</manifest>

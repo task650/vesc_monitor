@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:orientation="vertical" n1:focusableInTouchMode="true" n1:descendantFocusability="beforeDescendants" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ScrollView n1:id="@id/scrollView" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+        <LinearLayout n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentLeft="true" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Name" n1:layout_weight="0.25" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:id="@id/editTextModeName" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="" n1:layout_weight="1.0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_gravity="center_vertical" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Mode" n1:layout_weight="0.25" />
+                        <Spinner n1:id="@id/spinnerPPMMode" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/ppmMode_prompt" n1:layout_weight="1.0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <CheckBox n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/checkBoxUseOtherSettingsForFront" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Use diffrent settings for front axle\nOnly for Dual Diagonal or 4 Wheel Drive" n1:layout_weight="1.0" style="@style/BoxFrame" />
+            <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayoutFrontSettings" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Front Controller IDs" n1:layout_weight="1.0" />
+                <Spinner n1:entries="@array/front_controllerid_arrays" n1:id="@id/spinnerFrontControllerIdFirst" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/front_controllerid_prompt" n1:layout_weight="0.48" />
+                <Spinner n1:entries="@array/front_controllerid_arrays" n1:id="@id/spinnerFrontControllerIdSecond" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/front_controllerid_prompt" n1:layout_weight="0.5" />
+            </LinearLayout>
+            <LinearLayout n1:layout_width="fill_parent" n1:layout_height="15.0dip" />
+            <LinearLayout n1:orientation="horizontal" n1:id="@id/modeFrontSpacer5" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <android.support.v4.widget.Space n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="3.0" />
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:textColor="#ffbb0000" n1:gravity="center" n1:id="@id/textView13" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="REAR" n1:layout_weight="1.0" />
+                <android.support.v4.widget.Space n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:textColor="#ffbb0000" n1:gravity="center" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="FRONT" n1:layout_weight="1.0" />
+                <android.support.v4.widget.Space n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <CheckBox n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/checkBoxUseMaxWatt" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Use Max Watt" n1:layout_weight="3.0" />
+                <EditText n1:gravity="right" n1:id="@id/editTextModeMaxWatt" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal|numberSigned" />
+                <CheckBox n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:id="@id/checkBoxFrontUseMaxWatt" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+                <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeFrontMaxWatt" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal|numberSigned" />
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/textView6" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text=" W" n1:layout_weight="0.5" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Motor Max Current" n1:layout_weight="3.0" />
+                        <EditText n1:gravity="right" n1:id="@id/editTextModeMaxMotorCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal" />
+                        <android.support.v4.widget.Space n1:id="@id/modeFrontSpacer1" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeFrontMaxMotorCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal" />
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text=" A" n1:layout_weight="0.5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/textView9" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Battery Max Current" n1:layout_weight="3.0" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeMaxBatteryCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal" />
+                        <android.support.v4.widget.Space n1:id="@id/modeFrontSpacer2" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeFrontMaxBatteryCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal" />
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/textView8" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text=" A" n1:layout_weight="0.5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Motor Min Current" n1:layout_weight="3.0" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeMinMotorCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal|numberSigned" />
+                        <android.support.v4.widget.Space n1:id="@id/modeFrontSpacer3" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeFrontMinMotorCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal|numberSigned" />
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text=" A" n1:layout_weight="0.5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Battery Min Current" n1:layout_weight="3.0" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeMinBatteryCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal|numberSigned" />
+                        <android.support.v4.widget.Space n1:id="@id/modeFrontSpacer4" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_weight="0.5" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeFrontMinBatteryCurrent" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal|numberSigned" />
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text=" A" n1:layout_weight="0.5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:layout_width="fill_parent" n1:layout_height="15.0dip" />
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <LinearLayout n1:orientation="vertical" style="@style/BoxFrame">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/textViewMaxSpeed" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Max Speed" n1:layout_weight="3.0" />
+                        <EditText n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:gravity="right" n1:id="@id/editTextModeMaxSpeed" n1:background="@android:drawable/editbox_background_normal" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="0" n1:layout_weight="1.0" n1:inputType="numberDecimal" />
+                        <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/textViewSpeedUnit" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="km/h" n1:layout_weight="0.75" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:layout_width="fill_parent" n1:layout_height="15.0dip" />
+            <CheckBox n1:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small" n1:id="@id/checkBoxUseSpecialThrottleCurve" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Use special ThrottleCurve" style="@style/BoxFrame" />
+            <Button n1:textSize="16.0dip" n1:id="@id/buttonThrottleCurve" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Y -75.0  -50.0  -25.0  |  25.0  50.0  75.0\nX -75.0  -50.0  -25.0  |  25.0  50.0  75.0" />
+            <LinearLayout n1:layout_width="fill_parent" n1:layout_height="15.0dip" />
+            <CheckBox n1:id="@id/checkBoxUseSpecialBrakingAllwedPID" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Use special Braking at Cruise Control" style="@style/BoxFrame" />
+            <Spinner n1:entries="@array/pidBrakingAllowed_arrays" n1:layout_gravity="right" n1:id="@id/spinnerPIDBraking" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:prompt="@string/pidBrakingAllowed_prompt" style="@style/BoxFrame" />
+            <LinearLayout n1:layout_width="fill_parent" n1:layout_height="15.0dip" />
+            <CheckBox n1:id="@id/checkBoxUseSpecialCruiseControlPID" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:text="Use special Cruise Control PID" style="@style/BoxFrame" />
+            <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayoutPID" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="P" />
+                <Spinner n1:entries="@array/pid_arrays" n1:id="@id/spinnerPIDkP" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/pid_prompt" n1:layout_weight="1.0" />
+                <TextView n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text=" I" />
+                <Spinner n1:entries="@array/pid_arrays" n1:id="@id/spinnerPIDkI" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/pid_prompt" n1:layout_weight="1.0" />
+                <TextView n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text=" D" />
+                <Spinner n1:entries="@array/pid_arrays" n1:id="@id/spinnerPIDkD" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/pid_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

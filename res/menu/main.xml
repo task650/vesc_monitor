@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <item n1:icon="@android:drawable/ic_menu_info_details" n1:id="@id/test_device" n1:orderInCategory="1" n1:showAsAction="always"
+      xmlns:n1="http://schemas.android.com/apk/res/android" />
+    <item n2:icon="@android:drawable/ic_menu_gallery" n2:id="@id/menu_graphs" n2:orderInCategory="2" n2:showAsAction="always"
+      xmlns:n2="http://schemas.android.com/apk/res/android" />
+    <item n3:id="@id/menu_refresh" n3:orderInCategory="3" n3:checkable="false" n3:showAsAction="ifRoom"
+      xmlns:n3="http://schemas.android.com/apk/res/android" />
+    <item n4:id="@id/menu_scan" n4:orderInCategory="100" n4:title="@string/menu_scan" n4:showAsAction="always|withText"
+      xmlns:n4="http://schemas.android.com/apk/res/android" />
+    <item n5:id="@id/menu_stop" n5:orderInCategory="101" n5:title="@string/menu_stop" n5:showAsAction="always|withText"
+      xmlns:n5="http://schemas.android.com/apk/res/android" />
+</menu>

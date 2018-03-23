@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:id="@id/activity_modes" n1:paddingLeft="16.0dip" n1:paddingTop="16.0dip" n1:paddingRight="16.0dip" n1:paddingBottom="16.0dip" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ScrollView n1:id="@id/scrollView" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+        <LinearLayout n1:orientation="vertical" n1:id="@id/mainLayout" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentRight="true" n1:layout_alignParentEnd="true">
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Distance" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBITotalDistance" style="@style/BoardInfoValue" />
+                <TextView n1:id="@id/tvBITotalDistanceUnit" n1:text=" Km" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Wh Drawn" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIWhDrawn" style="@style/BoardInfoValue" />
+                <TextView n1:text=" Wh" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Wh Charged" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIWhCharged" style="@style/BoardInfoValue" />
+                <TextView n1:text=" Wh" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:id="@id/tvBIWhPerKmTitel" n1:text="Ø Wh/km" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIWhPerKm" style="@style/BoardInfoValue" />
+                <TextView n1:text=" Wh" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ah Drawn" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAhDrawn" style="@style/BoardInfoValue" />
+                <TextView n1:text=" Ah" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ah Charged" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAhCharged" style="@style/BoardInfoValue" />
+                <TextView n1:text=" Ah" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:id="@id/tvBIAhPerKmTitel" n1:text="Ø Ah/km" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAhPerKm" style="@style/BoardInfoValue" />
+                <TextView n1:text=" Ah" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Total ON Time" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBITotalTime" style="@style/BoardInfoValue" />
+                <TextView n1:text="" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:id="@id/textView15" n1:text="Ø ON Speed" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBITotalAvgSpeed" style="@style/BoardInfoValue" />
+                <TextView n1:id="@id/tvBITotalAvgSpeedUnit" n1:text=" km/h" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Active Watt" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgWattActive" style="@style/BoardInfoValue" />
+                <TextView n1:text=" W" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Riding Time" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIRidingTime" style="@style/BoardInfoValue" />
+                <TextView n1:text="" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Riding Speed" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIRidingAvgSpeed" style="@style/BoardInfoValue" />
+                <TextView n1:id="@id/tvBIRidingAvgSpeedUnit" n1:text=" km/h" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Riding Watt" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgWattRiding" style="@style/BoardInfoValue" />
+                <TextView n1:text=" W" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Active Motor Amps" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgMotorAmpsUsedPos" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" |" n1:layout_weight="0.1" style="@style/BoardInfoValue" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgMotorAmpsUsedNeg" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" A" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Active Battery Amps" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgBatteryAmpsUsedPos" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" |" n1:layout_weight="0.1" style="@style/BoardInfoValue" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgBatteryAmpsUsedNeg" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" A" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Riding Motor Amps" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgMotorAmpsRidingPos" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" |" n1:layout_weight="0.1" style="@style/BoardInfoValue" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgMotorAmpsRidingNeg" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" A" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+            <LinearLayout n1:background="@android:drawable/editbox_background_normal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                <TextView n1:text="Ø Riding Battery Amps" style="@style/BoardInfoLabel" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgBatteryAmpsRidingPos" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" |" n1:layout_weight="0.1" style="@style/BoardInfoValue" />
+                <TextView n1:gravity="right" n1:id="@id/tvBIAvgBatteryAmpsRidingNeg" n1:layout_weight="0.65" style="@style/BoardInfoValue" />
+                <TextView n1:text=" A" style="@style/BoardInfoUnit" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

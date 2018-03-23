@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:id="@id/activity_battery_setup" n1:paddingLeft="16.0dip" n1:paddingTop="16.0dip" n1:paddingRight="16.0dip" n1:paddingBottom="16.0dip" n1:focusableInTouchMode="true" n1:descendantFocusability="beforeDescendants" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ScrollView n1:id="@id/scrollView" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+        <TableLayout n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentRight="true" n1:layout_alignParentEnd="true">
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <CheckBox n1:textAppearance="?android:textAppearanceSmall" n1:id="@id/playBatteryAlarm" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_span="2" n1:text="Alarm at 50%, 40%, 30%, 20%, 10%, 0%" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery Wh" />
+                <EditText n1:id="@id/editTextBatteryWh" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="number" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery Type" />
+                <Spinner n1:entries="@array/batteryType_arrays" n1:id="@id/spinnerBatteryType" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/noOfMotors_prompt" n1:layout_weight="1.0" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="No of cells" />
+                <EditText n1:id="@id/editTextNoOfCells" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="number" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 100%" />
+                <EditText n1:id="@id/editTextPercent100" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 90%" />
+                <EditText n1:id="@id/editTextPercent90" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 80%" />
+                <EditText n1:id="@id/editTextPercent80" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 70%" />
+                <EditText n1:id="@id/editTextPercent70" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 60%" />
+                <EditText n1:id="@id/editTextPercent60" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 50%" />
+                <EditText n1:id="@id/editTextPercent50" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 40%" />
+                <EditText n1:id="@id/editTextPercent40" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 30%" />
+                <EditText n1:id="@id/editTextPercent30" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 20%" />
+                <EditText n1:id="@id/editTextPercent20" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 10%" />
+                <EditText n1:id="@id/editTextPercent10" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow n1:background="@android:drawable/editbox_dropdown_light_frame" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+                <TextView n1:textAppearance="?android:textAppearanceSmall" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Battery 0%" />
+                <EditText n1:id="@id/editTextPercent0" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_column="1" n1:ems="10" n1:inputType="numberDecimal" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

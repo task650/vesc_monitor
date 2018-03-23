@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <SurfaceView n1:id="@id/sview" n1:background="@color/ap_gray" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true" />
+    <ToggleButton n1:gravity="center" n1:id="@id/toggleVideo" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:textOn="" n1:textOff="" n1:drawableTop="@android:drawable/ic_menu_camera" n1:layout_alignParentBottom="true" n1:layout_alignParentStart="true" />
+    <LinearLayout n1:orientation="vertical" n1:id="@id/dataLayout" n1:layout_width="fill_parent" n1:layout_height="wrap_content" />
+    <ScrollView n1:gravity="bottom" n1:id="@id/SCROLLER_ID" n1:scrollbars="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_toRightOf="@id/toggleVideo" n1:layout_below="@id/dataLayout">
+        <TextView n1:textSize="12.0dip" n1:ellipsize="start" n1:id="@id/errorText" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:text="" n1:maxLines="256" n1:fontFamily="monospace" />
+    </ScrollView>
+</RelativeLayout>

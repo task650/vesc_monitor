@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <LinearLayout n1:orientation="vertical" n1:id="@id/linearLayoutVescData" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:id="@id/speedModeBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/modeTitle" n1:padding="1.0dip" n1:text="@string/mode" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textColor="@color/ap_white" n1:gravity="right" n1:id="@id/ppmModeText" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="unknown" n1:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:id="@id/maxWattModeTitel" n1:text="Mode" n1:layout_weight="3.0" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/maxWattModeText" n1:text="" n1:layout_weight="2.5" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:id="@id/maxWattModeUnit" n1:text="" n1:layout_weight="1.0" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:layout_height="wrap_content" n1:text="@string/maxMotorCurrentMain" n1:layout_weight="3.0" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/maxMotorCurrentText" n1:text="0" n1:layout_weight="2.5" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" n1:layout_weight="1.0" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/minMotorCurrentMain" n1:layout_weight="3.0" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/minMotorCurrentText" n1:text="0" n1:layout_weight="2.5" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" n1:layout_weight="1.0" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:id="@id/textViewModeMaxSpeedUnit" n1:text="@string/maxSpeedMainKm" n1:layout_weight="4.0" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/maxSpeedText" n1:text="0" n1:layout_weight="1.5" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text="" n1:layout_weight="1.0" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/maxBatteryCurrentMain" n1:layout_weight="3.0" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/maxBatteryCurrentText" n1:text="0" n1:layout_weight="2.5" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" n1:layout_weight="1.0" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/minBatteryCurrentMain" n1:layout_weight="3.0" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/minBatteryCurrentText" n1:text="0" n1:layout_weight="2.5" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" n1:layout_weight="1.0" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:id="@id/speedBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/speedTitle" n1:text="@string/speed" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout n1:layout_gravity="bottom" style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="GPS" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/speedGPSText" n1:text="0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:textSize="6.0dip" n1:id="@id/textViewGPSSpeedUnitSmall" n1:text=" km/h" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/max" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/speedMaxText" n1:text="0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:textSize="6.0dip" n1:id="@id/textViewSpeedUnitSmall" n1:text=" km/h" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/averageTotal" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/speedAvgText" n1:text="0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:textSize="6.0dip" n1:id="@id/textViewSpeedAvgUnitSmall" n1:text=" km/h" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/averageRunning" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/speedAvgRunningText" n1:text="0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:textSize="6.0dip" n1:id="@id/textViewSpeedAvgRunningUnitSmall" n1:text=" km/h" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:textSize="45.0dip" n1:textColor="@android:color/holo_red_dark" n1:id="@id/speedText" n1:text="0" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="8.0dip" n1:id="@id/textViewSpeedUnitBig" n1:text=" km/h" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:id="@id/batteryBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/batteryTitle" n1:text="@string/battery" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout n1:layout_gravity="center" style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/min" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/minInpVoltageText" n1:text="0.00" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" V" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/perCell" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/singleCellVoltText" n1:text="0.00" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" V" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/batteryText" n1:text="0.00" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:text=" V" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:id="@id/powerBox" style="@style/BoxFrameDark">
+                <RelativeLayout style="@style/TextStyleMainTitleDark">
+                    <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayout3" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_centerVertical="true" n1:layout_alignParentStart="true">
+                        <ProgressBar n1:id="@id/progressPowerNegative" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="500" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_negative" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" n1:rotation="180.0" style="?android:progressBarStyleHorizontal" />
+                        <ProgressBar n1:id="@id/progressPowerPositive" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="500" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_positive" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+                    </LinearLayout>
+                    <TextView n1:id="@id/powerTitle" n1:text="@string/power" n1:layout_alignTop="@id/linearLayout3" n1:layout_alignParentStart="true" style="@style/TextStyleMainTitleNoBackgroundDark" />
+                </RelativeLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/min" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/minPowerText" n1:text="0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:id="@id/textView5" n1:text=" W" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/max" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/maxPowerText" n1:text="0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" W" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/powerText" n1:text="0" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:text=" W" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:id="@id/tempPCBBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/tempPCBTitle" n1:text="@string/temp" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout n1:layout_gravity="center" style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/max" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/maxTempText" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" °C" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:id="@id/avgTemperaturTotalTitel" n1:text="@string/avg" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/avgTemperaturTotal" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" °C" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/tempText" n1:text="0.0" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:text=" °C" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:id="@id/motorCurrentBox" style="@style/BoxFrameDark">
+                <RelativeLayout style="@style/TextStyleMainTitleDark">
+                    <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayout4" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_centerVertical="true" n1:layout_alignParentStart="true">
+                        <ProgressBar n1:id="@id/progressMotorNegative" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="500" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_negative" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" n1:rotation="180.0" style="?android:progressBarStyleHorizontal" />
+                        <ProgressBar n1:id="@id/progressMotorPositive" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="500" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_positive" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+                    </LinearLayout>
+                    <TextView n1:id="@id/motorCurrentTitle" n1:text="@string/motorCurrent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true" style="@style/TextStyleMainTitleNoBackgroundDark" />
+                </RelativeLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:id="@id/textView" n1:text="@string/min" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/curMotorMinText" n1:layout_height="wrap_content" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/max" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/curMotorMaxText" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/curMotorText" n1:text="0.00" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:text=" A" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:id="@id/distanceBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/distanceTitle" n1:text="@string/distance" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout n1:layout_gravity="center" style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/altitude" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/altitudeText" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:id="@id/textViewAltitudeUnit" n1:layout_height="fill_parent" n1:text=" m" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:text="" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text="" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/distanceText" n1:text="0.000" n1:layout_weight="1.5" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:id="@id/textViewDistanceSpeedUnit" n1:text=" km" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:id="@id/batteryCurrentBox" style="@style/BoxFrameDark">
+                <RelativeLayout style="@style/TextStyleMainTitleDark">
+                    <LinearLayout n1:orientation="horizontal" n1:id="@id/linearLayout2" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_centerVertical="true" n1:layout_alignParentStart="true">
+                        <ProgressBar n1:id="@id/progressBatteryNegative" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="500" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_negative" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" n1:rotation="180.0" style="?android:progressBarStyleHorizontal" />
+                        <ProgressBar n1:id="@id/progressBatteryPositive" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="500" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_positive" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+                    </LinearLayout>
+                    <TextView n1:id="@id/batteryCurrentTitle" n1:layout_height="wrap_content" n1:text="@string/batteryCurrent" n1:layout_centerVertical="true" style="@style/TextStyleMainTitleNoBackgroundDark" />
+                </RelativeLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="@string/min" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/curBattMinText" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:id="@id/textView4" n1:text="@string/max" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:id="@id/curBattMaxText" n1:text="0.0" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" A" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/curBattText" n1:text="0.00" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:text=" A" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:id="@id/rangeBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/rangeTitle" n1:text="@string/range" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:id="@id/rangeText" n1:text="0.0" n1:layout_weight="3.0" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:id="@id/textViewRangeSpeedUnit" n1:text=" km" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:id="@id/dutyBox" style="@style/BoxFrameDark">
+                <RelativeLayout style="@style/TextStyleMainTitleDark">
+                    <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_centerVertical="true" n1:layout_alignParentStart="true">
+                        <ProgressBar n1:id="@id/progressDutyNegative" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="95" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_negative" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" n1:rotation="180.0" style="?android:progressBarStyleHorizontal" />
+                        <ProgressBar n1:id="@id/progressDutyPositive" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:max="95" n1:progress="0" n1:progressDrawable="@drawable/custom_progress_bar_horizontal_positive" n1:minHeight="15.0dip" n1:layout_weight="1.0" n1:layout_centerHorizontal="true" n1:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+                    </LinearLayout>
+                    <TextView n1:id="@id/dutyTitle" n1:text="@string/duty" n1:layout_centerVertical="true" style="@style/TextStyleMainTitleNoBackgroundDark" />
+                </RelativeLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <LinearLayout style="@style/TextStyleMinMaxBox">
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:text="" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text="" style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                            <TextView n1:text="" style="@style/TextStyleMinMaxTitleDark" />
+                            <TextView n1:text="" style="@style/TextStyleMinMaxValueDark" />
+                            <TextView n1:text=" " style="@style/TextStyleMinMaxUnitDark" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView n1:id="@id/dutyCycleText" n1:text="0" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:text=" %" style="@style/TextStyleMainUnitDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:id="@id/whBox" style="@style/BoxFrameDark">
+                <TextView n1:text="Wh / Ah" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="@string/drawn" n1:layout_weight="1.0" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/drawnText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/drawnAhText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="@string/charged" n1:layout_weight="1.0" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/chargedText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/chargedAhText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:id="@id/textViewAverageWhSpeedUnit" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="@string/avgPerKm" n1:layout_weight="1.0" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgWhText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgAhText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:id="@id/textViewAverageWhSpeedUnit2" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="@string/avgPerKmActual" n1:layout_weight="1.0" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgWhAtTheMomentText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgAhAtTheMomentText" n1:text="0.000" n1:layout_weight="1.15" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout n1:id="@id/averageStatsBox" style="@style/BoxFrameDark">
+                <TextView n1:id="@id/textView12" n1:text="Ø Active / Riding" style="@style/TextStyleMainTitleDark" />
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:id="@id/textView10" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Mot" n1:layout_weight="0.7" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgMotorAmpsTotalPos" n1:text="0.0|" n1:layout_weight="0.8" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgMotorAmpsTotalNeg" n1:paddingRight="1.0dip" n1:text="-0.0" n1:layout_weight="0.75" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgMotorAmpsRidingPos" n1:text="0.0|" n1:layout_weight="0.8" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgMotorAmpsRidingNeg" n1:text="-0.0" n1:layout_weight="0.65" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:id="@id/textView7" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Bat" n1:layout_weight="0.7" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgBatteryAmpsTotalPos" n1:text="0.0|" n1:layout_weight="0.8" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgBatteryAmpsTotalNeg" n1:paddingRight="1.0dip" n1:text="-0.0" n1:layout_weight="0.75" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgBatteryAmpsRidingPos" n1:text="0.0|" n1:layout_weight="0.8" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgBatteryAmpsRidingNeg" n1:text="-0.0" n1:layout_weight="0.65" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:id="@id/textView11" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Watt" n1:layout_weight="0.7" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgWattActive" n1:paddingRight="1.0dip" n1:text="0.0" n1:layout_weight="1.55" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/avgWattRiding" n1:text="0" n1:layout_weight="1.45" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+                <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+                    <TextView n1:textSize="11.5dip" n1:textStyle="bold" n1:textColor="@color/ap_white" n1:gravity="left" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Time" n1:layout_weight="0.7" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/timeTotal" n1:paddingRight="1.0dip" n1:text="00:00" n1:layout_weight="1.55" style="@style/TextStyleMainValueDark" />
+                    <TextView n1:textSize="11.5dip" n1:id="@id/timeRiding" n1:text="00:00" n1:layout_weight="1.45" style="@style/TextStyleMainValueDark" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <LinearLayout n1:orientation="vertical" n1:layout_width="wrap_content" n1:layout_height="wrap_content">
+        <TextView n1:textSize="24.0dip" n1:id="@id/device_name" n1:layout_width="fill_parent" n1:layout_height="wrap_content" />
+        <TextView n1:textSize="12.0dip" n1:id="@id/device_address" n1:layout_width="fill_parent" n1:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView n1:textSize="24.0dip" n1:textStyle="bold" n1:textColor="@android:color/holo_red_dark" n1:gravity="center_vertical" n1:id="@id/device_board_name" n1:paddingLeft="10.0dip" n1:layout_width="wrap_content" n1:layout_height="fill_parent" />
+    <LinearLayout n1:orientation="vertical" n1:layout_width="0.0dip" n1:layout_height="fill_parent" n1:layout_weight="1.0">
+        <TextView n1:textSize="12.0dip" n1:gravity="center|right" n1:id="@id/device_km" n1:layout_width="fill_parent" n1:layout_height="0.0dip" n1:layout_weight="1.0" />
+        <TextView n1:textSize="12.0dip" n1:gravity="center|right" n1:id="@id/device_avgWh" n1:layout_width="fill_parent" n1:layout_height="0.0dip" n1:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout n1:orientation="vertical" n1:layout_width="wrap_content" n1:layout_height="fill_parent">
+        <TextView n1:textSize="12.0dip" n1:gravity="center_vertical" n1:id="@id/device_kmUnit" n1:layout_width="fill_parent" n1:layout_height="0.0dip" n1:layout_weight="1.0" />
+        <TextView n1:textSize="12.0dip" n1:gravity="center_vertical" n1:id="@id/device_avgWhUnit" n1:layout_width="fill_parent" n1:layout_height="0.0dip" n1:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

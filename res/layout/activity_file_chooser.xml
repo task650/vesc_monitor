@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:background="@android:color/white" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <RelativeLayout n1:id="@id/control_buttons" n1:background="@android:color/holo_blue_light" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+        <RelativeLayout n1:id="@id/backLayout" n1:layout_width="wrap_content" n1:layout_height="wrap_content">
+            <ImageView n1:id="@id/backImage" n1:background="#00000000" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:src="@drawable/back" />
+            <TextView n1:textStyle="bold" n1:textColor="@android:color/black" n1:id="@id/backTextView" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="@string/Parent_Directory" n1:layout_toRightOf="@id/backImage" n1:layout_centerVertical="true" n1:layout_toEndOf="@id/backImage" />
+        </RelativeLayout>
+        <ImageButton n1:id="@id/saveFolderButton" n1:background="#00000000" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_margin="10.0dip" n1:src="@android:drawable/ic_menu_save" n1:layout_alignParentRight="true" />
+        <ImageButton n1:id="@id/addFolderButton" n1:background="#00000000" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_margin="10.0dip" n1:src="@drawable/ic_menu_archive" n1:layout_toLeftOf="@id/saveFolderButton" />
+    </RelativeLayout>
+    <ListView n1:id="@android:id/list" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_below="@id/control_buttons" />
+</RelativeLayout>

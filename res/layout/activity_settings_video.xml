@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:orientation="vertical" n1:focusableInTouchMode="true" n1:descendantFocusability="beforeDescendants" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ScrollView n1:id="@id/scrollView" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+        <LinearLayout n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_alignParentLeft="true" n1:layout_alignParentTop="true" n1:layout_alignParentStart="true">
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Video Resolution" n1:layout_weight="0.5" />
+                <Spinner n1:id="@id/spinnerVideoResultion" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/videoResultion_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Video Quality in kbit" n1:layout_weight="0.5" />
+                <Spinner n1:entries="@array/videoQuality_arrays" n1:id="@id/spinnerVideoQuality" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/videoQuality_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Sound Quality in kbit" n1:layout_weight="0.5" />
+                <Spinner n1:entries="@array/soundQuality_arrays" n1:id="@id/spinnerSoundQuality" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/soundQuality_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Realtime Data Size in %" n1:layout_weight="0.5" />
+                <Spinner n1:entries="@array/realtimeSize_arrays" n1:id="@id/spinnerRealtimeSize" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/realtimeSize_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <TextView n1:textAppearance="@style/TextAppearance.AppCompat.Medium" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="Video Layout" n1:layout_weight="0.5" />
+                <Spinner n1:entries="@array/videoLayout_arrays" n1:id="@id/spinnerVideoLayout" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:prompt="@string/videoLayout_prompt" n1:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="wrap_content" style="@style/BoxFrame">
+                <CheckBox n1:id="@id/makeBackgroundTransparentCheckBox" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="Make Background Transparent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
